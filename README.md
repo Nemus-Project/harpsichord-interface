@@ -1,12 +1,12 @@
-# Harpsichord Jack Tracking
+# NEMUS Harpsichord Interface
 
-This repository collects together all materials (CAD Drawings, diagrams, firmware source code) related to Harpsichord Jack Tracking Project at the NEMUS project.
+This repository collects together all materials (CAD Drawings, diagrams, firmware source code) related to the NEMUS Harpsichord Interface project.
 
 |               ![ ](img/side_w-o_sensors.jpeg)               |
 | :---------------------------------------------------------: |
 | Side View of the model harpsichord used during development. |
 
-- [Harpsichord Jack Tracking](#harpsichord-jack-tracking)
+- [NEMUS Harpsichord Interface](#nemus-harpsichord-interface)
   - [Measurements](#measurements)
     - [Model Keyboard](#model-keyboard)
     - [Jack Pitch](#jack-pitch)
