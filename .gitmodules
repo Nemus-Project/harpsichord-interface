@@ -1,0 +1,9 @@
+[submodule "firmware"]
+	path = firmware
+	url = https://github.com/Nemus-Project/harpsichord-interface-firmware
+[submodule "cad"]
+	path = cad
+	url = https://github.com/Nemus-Project/harpsichord-interface-cad
+[submodule "models"]
+	path = models
+	url = https://github.com/Nemus-Project/harpsichord-interface-models
