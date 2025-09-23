@@ -1,5 +1,5 @@
 # NEMUS Harpsichord Interface
-
+[![DOI](https://zenodo.org/badge/964509187.svg)](https://doi.org/10.5281/zenodo.16847980)
 This repository collects together all materials (CAD Drawings, diagrams, firmware source code) related to the NEMUS Harpsichord Interface project.
 
 |               ![ ](img/side_w-o_sensors.jpeg)               |
