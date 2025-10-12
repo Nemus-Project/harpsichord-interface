@@ -3,10 +3,6 @@
 
 This repository collects together all materials (CAD Drawings, diagrams, firmware source code) related to the NEMUS Harpsichord Interface project.
 
-|               ![ ](img/side_w-o_sensors.jpeg)               |
-| :---------------------------------------------------------: |
-| Side View of the model harpsichord used during development. |
-
 - [NEMUS Harpsichord Interface](#nemus-harpsichord-interface)
   - [Measurements](#measurements)
     - [Model Keyboard](#model-keyboard)
