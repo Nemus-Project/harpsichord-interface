@@ -180,16 +180,16 @@ Configuration:
 
 #### Using 2 Micro controllers
 
-Each sensor board needs 8 pins
+Each sensor board needs 8 pins:
   
   1. GND 
-  2. VCC/VDD 5V
-  3. VDD 3V
+  2. 5V
+  3. 3V
   4. Mux Address A
   5. Mux Address B
   6. Mux Address C
   7. LED Data
-  8.  Signal 
+  8. Signal 
 
 ### Power
 
