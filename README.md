@@ -28,7 +28,6 @@ This repository collects together all materials (CAD Drawings, diagrams, firmwar
     - [Jack Differentiation](#jack-differentiation)
     - [Aftertouch](#aftertouch)
 
-
 ## Measurements
 
 ### Model Keyboard
@@ -94,7 +93,9 @@ The should be `40 mm` in length to avoid potential catching on the jack hole. Th
 | Cross-section of full sized harpsichord interface |
 
 
-## QRE1113 Notes
+## Electronics
+
+### QRE1113 Notes
 
 |       <img src="img/top_down_w_nano.jpg" width="50%">       |
 | :---------------------------------------------------------: |
@@ -103,7 +104,7 @@ The should be `40 mm` in length to avoid potential catching on the jack hole. Th
 
 Displacement of the jacks is measure using QRE1113 IR LED / Transistor pair. The section covers some general observations and helpful information about these sensors.
 
-### Spacing
+#### Spacing
 
 Distance between pins is `1.8mm` meaning the space from the centre is `0.9mm`. CAD placement should offset by `0.9mm` to compensate.
 
@@ -113,7 +114,7 @@ Distance between pins is `1.8mm` meaning the space from the centre is `0.9mm`. C
 | long leg pitch  | `3.80mm` |
 
 
-### Functionality
+#### Functionality
 
 QRE1113s are used with alongside adhesive strips with a black and white gradient printed on it, which are attached to each jack. 
 
@@ -124,7 +125,7 @@ The optimal distance between the strip and the sensor is around 6mm with a volta
 |     Jacks with gradient strip attached      |
 
 
-### Data sheets
+#### Data sheets
 
 - [QRE1113 Datasheet](https://www.mouser.in/datasheet/2/308/QRE1113-1121523.pdf)
 
@@ -176,6 +177,20 @@ Solutions:
   12. Signal 5
   13. Signal 6
   14. Signal 7
+
+### Power
+
+The interface is intended to be operated from a 5V 1A power supply.
+
+The rotary encoder, FRAM and RGB LEDs draw from the Arduino Nano's 3.3v regulated power line.
+
+The power supply requirements are then dictated by the remaining components, which use the power directly:
+
+|             | Min Voltage | Max Voltage |
+| ----------: | :---------: | :---------: |
+| Nano 33 BLE |     4.5     |    21.0     |
+|         MUX |     5.0     |    18.0     |
+|     QRE1113 |     0.0     |    30.0     |
 
 
 ## MIDI Specifications
