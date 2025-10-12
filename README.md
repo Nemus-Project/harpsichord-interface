@@ -95,6 +95,16 @@ The should be `40 mm` in length to avoid potential catching on the jack hole. Th
 
 ## Electronics
 
+The electronics uses the following components:
+
+QRE1113
+10 kΩ Potentiometer
+MB85RS64 SPI Non-Volatile FRAM
+Rotary Encoder w/ tactile switch
+CD4051BE multiplexer
+WS2812B RGB LEDs
+
+
 ### QRE1113 Notes
 
 |       <img src="img/top_down_w_nano.jpg" width="50%">       |
@@ -189,9 +199,10 @@ The power supply requirements are then dictated by the remaining components, whi
 |             | Min Voltage | Max Voltage |
 | ----------: | :---------: | :---------: |
 | Nano 33 BLE |     4.5     |    21.0     |
-|         MUX |     5.0     |    18.0     |
+|         MUX |   **5.0**   |  **18.0**   |
 |     QRE1113 |     0.0     |    30.0     |
 
+The 
 
 ## MIDI Specifications
 
