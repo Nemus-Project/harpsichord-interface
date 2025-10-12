@@ -18,12 +18,15 @@ This repository collects together all materials (CAD Drawings, diagrams, firmwar
       - [7 Sensor Face Board](#7-sensor-face-board)
     - [Gradient Tag](#gradient-tag)
     - [Diagram](#diagram)
-  - [QRE1113 Notes](#qre1113-notes)
-    - [Spacing](#spacing)
-    - [Functionality](#functionality)
-    - [Data sheets](#data-sheets)
-    - [Multiplexing](#multiplexing)
-      - [1. Using 2 Micro controllers](#1-using-2-micro-controllers)
+  - [Electronics](#electronics)
+    - [QRE1113 Notes](#qre1113-notes)
+      - [Spacing](#spacing)
+      - [Functionality](#functionality)
+      - [Data sheet](#data-sheet)
+    - [Multiplexer](#multiplexer)
+    - [Microcontroller](#microcontroller)
+      - [Using 2 Micro controllers](#using-2-micro-controllers)
+    - [Power](#power)
   - [MIDI Specifications](#midi-specifications)
     - [Jack Differentiation](#jack-differentiation)
     - [Aftertouch](#aftertouch)
@@ -97,12 +100,12 @@ The should be `40 mm` in length to avoid potential catching on the jack hole. Th
 
 The electronics uses the following components:
 
-QRE1113
-10 kΩ Potentiometer
-MB85RS64 SPI Non-Volatile FRAM
-Rotary Encoder w/ tactile switch
-CD4051BE multiplexer
-WS2812B RGB LEDs
+- [Arduino Nano 33 BLE](https://docs.arduino.cc/resources/datasheets/ABX00030-datasheet.pdf)
+- [QRE1113](https://www.onsemi.com/download/data-sheet/pdf/qre1113-d.pdf)
+- [MB85RS64 SPI Non-Volatile FRAM](https://cdn-shop.adafruit.com/datasheets/MB85RS64V-DS501-00015-4v0-E.pdf)
+- [Rotary Encoder w/ tactile switch]
+- [CD4051BE multiplexer](https://www.ti.com/lit/ds/symlink/cd4053b.pdf?ts=1760254948987&ref_url=android-app%253A%252F%252Fcom.google.android.googlequicksearchbox%252F)
+- [WS2812B RGB LEDs](https://cdn-shop.adafruit.com/product-files/4684/4684_WS2812B-2020_V1.3_EN.pdf)
 
 
 ### QRE1113 Notes
@@ -135,7 +138,7 @@ The optimal distance between the strip and the sensor is around 6mm with a volta
 |     Jacks with gradient strip attached      |
 
 
-#### Data sheets
+#### Data sheet
 
 - [QRE1113 Datasheet](https://www.mouser.in/datasheet/2/308/QRE1113-1121523.pdf)
 
@@ -143,25 +146,27 @@ The optimal distance between the strip and the sensor is around 6mm with a volta
 | :----------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
 |                     QRE1113 Dimension. Not that pin 1 should always have a chamfer on the corner to help identify it.                      |                                                               QRE1113 Pinout                                                               |
 
-### Multiplexing
+### Multiplexer
+
+Multiplexing is achieved using a `CD4051BE`, chosen for the configuratoin of:
 
 - 14 Boards
 - 7 sensors each
 - 7 analog channels
 - 8 channel multiplexer
 
+### Microcontroller
 
-- BLE Nano
-  - 8 ADC channels A0 - A7
-  - For 8 ADC channels an 8-channel multiplexer will allow for 8 boards to address 8 sensors.
+Microcontroller is the Arduino Nano 33 BLE which has 8 ADC channels A0 - A7.
+For 8 ADC channels an 8-channel multiplexer will allow for 8 boards to address 8 sensors, though only 7 channels are used.
 
-Solutions:
+Configuration:
 
 1. Use 2 micro controllers, one for front, one for back
   - each a separate MIDI device
 2. cascade front and back
-  1. two groups of transistors
-      - 16 transistors
+  1. two groups of optical sensors
+      - 16 optical sensors
         - 2 sets of 7 for signals
         - 2 extra for interfacing with the others
       - 2 extra digital pins used
@@ -169,9 +174,9 @@ Solutions:
       - 7 multiplexers for groups of seven boards
       - 3 more digital pins for control 
 
-#### 1. Using 2 Micro controllers
+#### Using 2 Micro controllers
 
-- Each sensor board needs 8 pins
+Each sensor board needs 8 pins
   
   1. GND 
   2. VCC/VDD 5V
@@ -202,7 +207,7 @@ The power supply requirements are then dictated by the remaining components, whi
 |         MUX |   **5.0**   |  **18.0**   |
 |     QRE1113 |     0.0     |    30.0     |
 
-The 
+The CD4051BE MUX dictates the power range of 5V to 18V. The system has _only_ been tested using 5V, so behaviouyr will likely change.
 
 ## MIDI Specifications
 
