@@ -189,13 +189,7 @@ Each sensor board needs 8 pins
   5. Mux Address B
   6. Mux Address C
   7. LED Data
-  8.  Signal 1
-  9.  Signal 2
-  10. Signal 3
-  11. Signal 4
-  12. Signal 5
-  13. Signal 6
-  14. Signal 7
+  8.  Signal 
 
 ### Power
 
