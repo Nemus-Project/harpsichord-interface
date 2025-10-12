@@ -63,7 +63,7 @@ Give a rough pitch of `14.2375 mm` with an offset of  `33.5 mm` from the front e
 
 |    ![ ](img/49-key-top.jpeg)    |
 | :-----------------------------: |
-| Top view of the 49-key keyboard |ll
+| Top view of the 49-key keyboard |
 
 The full scale version of the interface has 49 keys and 2 jack rows. The jacks are generally around `4.65 mm`.
 
