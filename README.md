@@ -10,14 +10,14 @@ This repository collects together all materials (CAD Drawings, diagrams, firmwar
 - [NEMUS Harpsichord Interface](#nemus-harpsichord-interface)
   - [Measurements](#measurements)
     - [Model Keyboard](#model-keyboard)
-    - [Jack Pitch](#jack-pitch)
+      - [Jack Pitch](#jack-pitch)
     - [Full Scale Keyboard](#full-scale-keyboard)
-    - [Jack Pitch](#jack-pitch-1)
-    - [Jack Travel](#jack-travel)
-    - [PCB](#pcb)
+      - [Jack Pitch](#jack-pitch-1)
+      - [Jack Travel](#jack-travel)
+      - [PCB](#pcb)
       - [7 Sensor Face Board](#7-sensor-face-board)
-    - [Gradient Tag](#gradient-tag)
-    - [Diagram](#diagram)
+      - [Gradient Tag](#gradient-tag)
+      - [Diagram](#diagram)
   - [Electronics](#electronics)
     - [QRE1113 Notes](#qre1113-notes)
       - [Spacing](#spacing)
@@ -35,7 +35,11 @@ This repository collects together all materials (CAD Drawings, diagrams, firmwar
 
 ### Model Keyboard
 
-###  Jack Pitch
+| ![ ](img/haptic-harpsichord.jpg) |
+| :------------------------------: |
+|          Model Keyboard          |
+
+####  Jack Pitch
 
 | Jack | Centre distance from backboard (mm) |
 | ---- | ----------------------------------- |
@@ -63,17 +67,17 @@ Give a rough pitch of `14.2375 mm` with an offset of  `33.5 mm` from the front e
 
 The full scale version of the interface has 49 keys and 2 jack rows. The jacks are generally around `4.65 mm`.
 
-###  Jack Pitch
+####  Jack Pitch
 
 There is not much variation in the pitch of the jacks. On average the centre-to-centre is `14.02 mm`. Likely error between jacks would compound across the full length. This should be compensated for by the separate pcbs which have groups of 7 sensors.
 
 Space between the jacks is `9.75 mm`, meaning central pcbs will have to have less than half this distance (`4.875mm`) in order to slot together.
 
-###  Jack Travel
+####  Jack Travel
 
 The jacks have a height of `91.65mm`. Front jacks have a travel of about `8.5mm` and back jacks `9.0mm` between key release and full key press.
 
-### PCB
+#### PCB
 
 With a pitch of `14.02 mm` a theoretical limit to the width of a 7-sensor PCB would be `98.2 mm`, but with margin required from traces this is not possible. The upper limit is `112.22 mm` but with variation during fabrication it is unwise to push the tolerance to the nearest `1/10 mm`. A `1.5 mm` tolerance brings the limit to about `99.7 mm` to `110.7 mm`
 
@@ -83,13 +87,13 @@ Face boards mount the QRE1113s perpendicular to the board so that there is no ne
 
 There are a couple of designs, at at present what is most important is the hole mounts at (`18.00mm`, `10.00mm`) and (`18.00mm`, `81.40mm`)
 
-### Gradient Tag
+#### Gradient Tag
 
 The QRE1113 reflects from a tag with a gradient printed.
 
 The should be `40 mm` in length to avoid potential catching on the jack hole. The active area of the gradient need only be the length of the [jack travel](#jack-travel)
 
-### Diagram
+#### Diagram
 
 |        ![ ](img/cross_section_invert.png)         |
 | :-----------------------------------------------: |
