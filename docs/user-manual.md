@@ -30,14 +30,19 @@ To begin calibrating, do the following:
 2. Connect USB cable to a computer with Ardunio IDE installed.
 3. Open Arduino IDE on the connected computer
 4. In the device select drop down menu, click on **Arduino Nano BLE 33**. The name should now be highlighted bold highlighted bold.
+
 | ![ ](./img/device-select-menu.png) |
 | :--------------------------------: |
 |    Device Select Drop Down Menu    |
+
 5. Click the Serial Plotter icon
+
 | ![ ](../img/serial-plotter-icon.png) |
 | :----------------------------------: |
 |         Serial Plotter Icon          |
+
 6. Send a `p` character over the serial connection to activate and deactivate printing.
+
 |      ![ ](./img/serial-plotter-p-send.png)      |
 | :----------------------------------------------: |
 | Send a `p` over Serial to initialise the plotter |
