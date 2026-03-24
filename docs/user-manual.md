@@ -1,3 +1,5 @@
+# Haprischord Firmware User Manual
+
 ## Controller Board Layout
 
 | ![ ](./img/controller_board_labelled.png) |
@@ -81,8 +83,9 @@ The maximum and minimum values are printed to avoid automatic scaling of the y-a
 > Check the number against the Key, Pluck and Release thresholds to confirm
 > the current key.
 
-## Troubleshooting
+A [MIDI monitor application](https://www.snoize.com/MIDIMonitor/) can be used to track MIDI notes being generated.
 
+## Troubleshooting
 
 ### Some Sensor Boards Not Responding
 ### Sensor Thresholds Have changed
