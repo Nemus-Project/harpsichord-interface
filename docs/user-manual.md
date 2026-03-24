@@ -37,7 +37,7 @@ To begin calibrating, do the following:
 
 5. Click the Serial Plotter icon
 
-| ![ ](../img/serial-plotter-icon.png) |
+| ![ ](./img/serial-plotter-icon.png) |
 | :----------------------------------: |
 |         Serial Plotter Icon          |
 
