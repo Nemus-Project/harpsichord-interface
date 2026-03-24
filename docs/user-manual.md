@@ -21,7 +21,9 @@ The FRAM must be plugged into its socket before the arduino is powered on otherw
 
 > [!CAUTION]
 > **Power On Process:**
-> The Arduino will draw power from USB cable if the 5V power supply is not connected. Make sure to connect the power supply and turn > it on first before connecting the USB cable. Powering from USB alone may cause problems.
+> The Arduino will draw power from USB cable if the 5V power supply is not connected. 
+> Make sure to connect the power supply and turn it on first before connecting the USB cable. 
+> Powering from USB alone may cause issues with the firmware behaviour and sensor readings.
 
 ## Calibration
 
