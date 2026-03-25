@@ -78,13 +78,14 @@ The serial plotter displays a label for each data stream:
 
 |           Data            | Label |
 | :-----------------------: | :---: |
-|        Key Sensor         | `K:`  |
-|  Current Pluck Threshold  | `P:`  |
-| Current Release Threshold | `R:`  |
-|       Maximum Value       | `M:`  |
-|       Minimum Value       | `m:`  |
+|        Key Sensor         |  `K`  |
+|  Current Pluck Threshold  |  `P`  |
+| Current Release Threshold |  `R`  |
+|       Maximum Value       |  `M`  |
+|       Minimum Value       |  `m`  |
 
 The maximum and minimum values are printed to avoid automatic scaling of the y-axis, which makes calibration more difficult.
+For easy indentification, labels for threshold are followed by the index number for that key.
 
 > [!NOTE] 
 > There is currently a bug which results in an old label being displayed.
@@ -96,6 +97,6 @@ A [MIDI monitor application](https://www.snoize.com/MIDIMonitor/) can be used to
 ## Troubleshooting
 
 ### Some Sensor Boards Not Responding
-### Sensor Thresholds Have changed
+### Sensor Thresholds Have Changed
 
 Check that the correct supply is plugged in _and_ switched on. The Arduino Nano has a regiulated 3.3V power line that is used for the LEDs, rotary and FRAM. The sensors use the 5V power directly. Incorrect or absent power will result in a change of thresholds and some sensors may not respond as they try and draw 5V from the Arduino.
